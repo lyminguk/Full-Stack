@@ -1,0 +1,68 @@
+//Array - 1 Count even numbers
+//Given an array nums of integers, return how many of them contain an even number of digits.
+//Method A -  continuously dividing it by 10 until it reaches zero.
+class Solution {
+    public int findNumbers(int[] nums) {
+        int evens = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int digits = countDigits(nums[i]);
+            if (digits % 2 == 0) {
+                evens++;
+            }
+        }
+        return evens;
+    }
+
+    private int countDigits(int num) {
+        int count = 0;
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+        return count;
+    }
+}
+
+//Method B - Straightly find the digits by checking when the quotient is between 1 inclusive and 10 exclusive.
+class Solution {
+    public int findNumbers(int[] nums) {
+        int evens = 0;
+        for (int i = 0; i <nums.length; i++ ){
+            int digits = 0;
+            for (int n = 0; n <= 5; n++){
+                if (1 <= (nums[i] / (int)Math.pow(10, n)) && (nums[i] / (int)Math.pow(10, n)) < 10){
+                    digits = n+1;
+                } else {
+                    continue;
+                }
+                if ((digits % 2) == 0)
+                evens += 1;
+            }
+            
+        }
+        return evens;
+    }
+}
+
+
+
+//Array - 2 Merge Sorted Array
+//Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+//*nums1.length == m + n
+nums2.length == n
+0 <= m, n <= 200
+1 <= m + n <= 200
+-109 <= nums1[i], nums2[j] <= 109
+*/
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++){
+            if (nums[i] != val){
+                nums[k++] = nums[i]; 
+            }
+        }
+    
+        return k;
+    }
+}

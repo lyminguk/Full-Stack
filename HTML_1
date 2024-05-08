@@ -1,0 +1,26 @@
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <meta name="html project1" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div><!-- W3School-->
+    
+  <h1> This is h1 tag</h1>
+  
+  <h2> h2 tag </h2>  
+  <p> This is a &nbsp; paragraph. <br> Second paragraph. </p>
+  <a href="https://www.amazon.com/"> Amazon link </a>
+    <img src=""> 
+    <ul>
+      <li>WA</li>
+    </ul>
+    <ol>
+      <li>CA</li>
+    </ol>
+  </div>
+  
+</body>
+</html>
